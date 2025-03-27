@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Grupo_1183" data-name="Grupo 1183" transform="translate(-289.627 -410.804)">
+    <path id="Retângulo_151" data-name="Retângulo 151" d="M0,0H24V24H0Z" transform="translate(289.627 410.804)" fill="none"/>
+    <g id="ic-actions-paste">
+      <g id="Grupo_1179" data-name="Grupo 1179">
+        <path id="Caminho_32" data-name="Caminho 32" d="M292.127,419.8v-4a2,2,0,0,1,2-2h.59" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Linha_42" data-name="Linha 42" x2="3.84" transform="translate(298.127 413.804)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Caminho_33" data-name="Caminho 33" d="M305.127,413.8h1a2,2,0,0,1,2,2v.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Linha_43" data-name="Linha 43" y2="3.78" transform="translate(308.127 420.024)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <path id="Caminho_34" data-name="Caminho 34" d="M308.127,426.8v1a2,2,0,0,1-2,2h-1.72" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <g id="Grupo_1181" data-name="Grupo 1181">
+        <rect id="Retângulo_2734" data-name="Retângulo 2734" width="6.661" height="16" rx="2.217" transform="translate(292.127 413.804)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="Grupo_1180" data-name="Grupo 1180">
+          <line id="Linha_547" data-name="Linha 547" x2="2.099" transform="translate(294.412 417.373)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Linha_548" data-name="Linha 548" x2="2.099" transform="translate(294.412 420.24)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Linha_549" data-name="Linha 549" x2="2.099" transform="translate(294.412 423.106)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="Linha_550" data-name="Linha 550" x2="2.099" transform="translate(294.412 425.973)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+    <line id="Linha_551" data-name="Linha 551" x2="2.099" transform="translate(299.868 429.804)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>
