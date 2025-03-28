@@ -6,6 +6,19 @@
   overflow-x: hidden;
 }
 
+header img {
+  width: 160px;
+}
+
+header {
+  height: 70px;
+  z-index: -1;
+}
+
+.header-logo {
+  transition: opacity 0.3s ease-in-out;
+}
+
 .sidebar {
   width: 300px;
   height: calc(100vh - 70px);
@@ -87,4 +100,29 @@
   flex-grow: 1;
   align-items: start;
   position: relative;
+}
+
+@media (max-width: 945px) {
+  .header-logo {
+    content: url("../assets/small_logo.png");
+    width: 45px;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .sidebar {
+    background-color: transparent;
+  }
+
+  .menu-icon {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .shield-icon {
+    display: none;
+  }
 }
