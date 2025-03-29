@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 header img {
@@ -125,4 +124,43 @@ header {
   .shield-icon {
     display: none;
   }
+}
+
+@media (max-width: 620px) {
+  .send-document,
+  .earn-money {
+    display: none;
+  }
+}
+
+.send-document {
+  background-color: #2eda8a;
+  color: white;
+  border: none;
+  font-size: 13px;
+  width: 185px;
+  border-radius: 20px;
+}
+
+.earn-money {
+  background-color: white;
+  border: none;
+  font-size: 13px;
+  width: 130px;
+  height: 33px;
+  border-radius: 20px;
+  border: 1px solid #8654ff;
+  color: #8654ff;
+  margin-left: 10px;
+  letter-spacing: -1px;
+}
+
+.earn-money:hover {
+  background-color: #8654ff;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-dropdown::after {
+  display: none !important;
 }
