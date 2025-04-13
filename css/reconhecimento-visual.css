@@ -1,0 +1,11 @@
+.reconhecimento-container {
+    background-color: #3D3D85; 
+    width: 70%; 
+    gap:5%
+}
+
+#camera-container {
+    width: 85%; 
+    height: 65%; 
+    max-height: 335px;
+}
