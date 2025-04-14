@@ -1,8 +1,8 @@
-// Script para capturar vídeo da câmera, exibir na tela e alterar ícones após um certo tempo
+// Script para capturar vídeo da câmera, exibir na tela e alterar ícones/quadrantes conforme o contexto
 
 const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
-const quadrante = document.getElementById('quadrante-rosto');
+const quadranteRosto = document.getElementById('quadrante-rosto');
+const quadranteDigital = document.getElementById('quadrante-digital');
 
 function alterarIcone(icone, delay) {
   setTimeout(() => {
@@ -10,7 +10,7 @@ function alterarIcone(icone, delay) {
   }, delay);
 }
 
-function alterarQuadrante(delay, manterVerde = false) {
+function alterarQuadranteFacial(quadrante, delay, manterVerde = false) {
   if (!quadrante) return;
 
   setTimeout(() => {
@@ -24,7 +24,7 @@ function alterarQuadrante(delay, manterVerde = false) {
   }, delay);
 }
 
-function iniciarReconhecimento() {
+function iniciarReconhecimentoFacial() {
   navigator.mediaDevices
     .getUserMedia({ video: true })
     .then((stream) => {
@@ -37,7 +37,7 @@ function iniciarReconhecimento() {
         const ultimoIcone = index === icones.length - 1;
 
         alterarIcone(icone, delay);
-        alterarQuadrante(delay, ultimoIcone);
+        alterarQuadranteFacial(quadranteRosto, delay, ultimoIcone);
       });
     })
     .catch((err) => {
@@ -45,4 +45,60 @@ function iniciarReconhecimento() {
     });
 }
 
-iniciarReconhecimento();
+function iniciarReconhecimentoDigital() {
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((stream) => {
+      video.srcObject = stream;
+
+      setTimeout(() => {
+        if (quadranteDigital) {
+          quadranteDigital.src = '../assets/icone-digital-verde.svg';
+        }
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error('Erro ao acessar a câmera:', err);
+    });
+}
+
+function iniciarReconhecimentoRG() {
+  navigator.mediaDevices
+  .getUserMedia({ video: true })
+  .then((stream) => {
+    video.srcObject = stream;
+    const icones = document.querySelectorAll('.icon-reconhecimento');
+
+    icones.forEach((icone, index) => {
+      const delay = (index + 1) * 2000;
+      alterarIcone(icone, delay);
+    });
+  })
+  .catch((err) => {
+    console.error('Erro ao acessar a câmera:', err);
+  });
+}
+
+function inicializarReconhecimento(contexto) {
+  switch (contexto) {
+    case 'facial':
+      iniciarReconhecimentoFacial();
+      break;
+    case 'digital':
+      iniciarReconhecimentoDigital();
+      break;
+    case 'rg':
+      iniciarReconhecimentoRG();
+      break;
+    default:
+      console.error('Contexto de reconhecimento inválido!');
+  }
+}
+
+if (quadranteDigital) {
+  inicializarReconhecimento('digital');
+} else if (quadranteRosto) {
+  inicializarReconhecimento('facial');
+} else {
+  inicializarReconhecimento('rg');
+}
