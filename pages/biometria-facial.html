@@ -102,37 +102,39 @@
 
         <main class="flex-grow-1 p-4 d-flex justify-content-center">
           <div class="content-container shadow rounded-4 p-4 h-100 d-flex justify-content-center text-white flex-column align-items-center reconhecimento-container">
-              <h1 class="fs-4 fw-bold">Centralize o rosto</h1>
+              <h1 class="titulo-camera fw-bold">Centralize o rosto</h1>
               <div class="bg-white rounded-4 d-flex justify-content-center align-items-center overflow-hidden" id="camera-container">
                   <video id="video" autoplay playsinline class="w-100 h-100 object-fit-cover"></video>
                   <canvas id="canvas" class="d-none"></canvas>
                   <img src="../assets/quadrante-azul.svg" id="quadrante-rosto" alt="quadrante para posicionamento do rosto" class="position-absolute" style="width: 15%; visibility: hidden;"/>
               </div>
-              <div class="w-75 d-flex justify-content-center">
-                <h2 class="fs-5 text-center">Por favor, fique em um local iluminado</h1>
-              </div>
-              <div class="d-flex justify-content-between align-items-center" style="width: 85%;">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-6">
-                      <span class="fs-5 d-flex gap-1">
-                        <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
-                        Rosto perfil - Direita
-                      </span>
-                      <span class="fs-5 d-flex gap-1">
-                        <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
-                        Rosto perfil - Esquerda
-                      </span>
-                    </div>
-                    <div class="col-6 d-flex flex-column text-end">
-                      <span class="fs-5 d-flex gap-1 justify-content-end">
-                        <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
-                        Rosto frontal - Longe
-                      </span>
-                      <span class="fs-5 d-flex gap-1 justify-content-end">
-                        <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
-                        Rosto frontal - Perto
-                      </span>
+              <div class="conteudo-inferior">
+                <div class="w-75 d-flex justify-content-center">
+                  <h2 class="texto-inferior">Por favor, fique em um local iluminado</h1>
+                </div>
+                <div class="d-flex justify-content-between align-items-center" style="width: 85%;">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-6">
+                        <span class="texto-verificacao">
+                          <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
+                          Rosto perfil - Direita
+                        </span>
+                        <span class="texto-verificacao">
+                          <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
+                          Rosto perfil - Esquerda
+                        </span>
+                      </div>
+                      <div class="col-6 d-flex flex-column text-end">
+                        <span class="texto-verificacao justify-content-end">
+                          <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
+                          Rosto frontal - Longe
+                        </span>
+                        <span class="texto-verificacao justify-content-end">
+                          <img class="icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />
+                          Rosto frontal - Perto
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
