@@ -29,7 +29,7 @@ function iniciarReconhecimentoFacial() {
     .getUserMedia({ video: true })
     .then((stream) => {
       video.srcObject = stream;
-
+      quadranteRosto.style.visibility = 'visible';
       const icones = document.querySelectorAll('.icon-reconhecimento');
 
       icones.forEach((icone, index) => {
@@ -50,11 +50,10 @@ function iniciarReconhecimentoDigital() {
     .getUserMedia({ video: true })
     .then((stream) => {
       video.srcObject = stream;
+      quadranteDigital.style.visibility = 'visible';
 
       setTimeout(() => {
-        if (quadranteDigital) {
           quadranteDigital.src = '../assets/icone-digital-verde.svg';
-        }
       }, 2000);
     })
     .catch((err) => {

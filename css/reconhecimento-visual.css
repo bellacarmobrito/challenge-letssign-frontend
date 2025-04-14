@@ -4,12 +4,16 @@
     gap:5%
 }
 
+.icon-reconhecimento {
+    width: 7%;
+}
+
 #camera-container {
     width: 85%; 
     height: 65%; 
     max-height: 335px;
 }
 
-.icon-reconhecimento {
-    width: 7%;
+#video {
+    transform: scaleX(-1);
 }
