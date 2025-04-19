@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Biometria digital e facial */
 .reconhecimento-container {
     background-color: #3D3D85;
     width: 100%;
@@ -83,7 +82,6 @@
     visibility: hidden;
 }
 
-/* Reconhecimento de RG */
 .bloco-verificacoes-rg {
     display: flex;
     justify-content: space-between;
@@ -114,7 +112,6 @@
 }
 
 @media (max-width: 1540px) {
-    /* Biometria digital e facial */
     #camera-container {
         max-height: 300px;
     }
@@ -139,14 +136,13 @@
         width: 75%;
     }
 
-    /* Reconhecimento de RG */
+
     .bloco-verificacoes-rg {
         width: 50%;
     }
 }
 
 @media (max-width: 1024px) {
-    /* Biometria digital a facial */
     #camera-container {
         max-height: 700px;
     }
@@ -176,7 +172,7 @@
         max-width: none;
     }
 
-    /* Reconhecimento de RG */
+
     .bloco-verificacoes-rg {
         width: 50% !important;
     }
@@ -184,7 +180,6 @@
 }
 
 @media (max-width: 720px) {
-    /* Biometria digital e facial */
     #camera-container {
         max-height: 500px;
     }
@@ -193,7 +188,7 @@
         width: 90%;
     }
 
-    /* Reconhecimento de RG */
+
     .bloco-verificacoes-rg {
         width: 60% !important;
     }
@@ -213,7 +208,6 @@
 
 @media (max-width: 550px) {
     
-    /* Biometria digital e facial */
     #camera-container {
         min-height: 0px;
         max-height: 350px;
@@ -240,7 +234,6 @@
         width: 85%;
     }
     
-    /* Reconhecimento de RG */
     .titulo-rg {
         font-size: 1.1rem !important;
     }

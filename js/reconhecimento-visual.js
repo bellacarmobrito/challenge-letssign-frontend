@@ -1,5 +1,3 @@
-// Script para capturar vídeo da câmera, exibir na tela e alterar ícones/quadrantes conforme o contexto
-
 const video = document.getElementById('video');
 const quadranteRosto = document.getElementById('quadrante-rosto');
 const quadranteDigital = document.getElementById('quadrante-digital');
