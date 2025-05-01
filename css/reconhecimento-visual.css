@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+.reconhecimento-container {
+    background-color: #3D3D85;
+    width: 100%;
+    max-width: 985px;
+    gap: 5%;
+}
+
+.icon-reconhecimento {
+    width: 7%;
+}
+
+.conteudo-inferior {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.titulo-camera {
+    margin-top: 2%;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.texto-verificacao {
+    font-size: 1.7rem;
+    gap: .25rem;
+}
+
+.texto-inferior {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.verificacoes-container {
+    width: 80%;
+}
+
+.verificacoes-container-interno {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+.coluna-verificacoes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.segunda-coluna {
+    width: 100%;
+    max-width: 300px;
+}
+
+#camera-container {
+    width: 85%;
+    height: 100%;
+    min-height: 320px;
+    max-height: 900px;
+}
+
+#video {
+    transform: scaleX(-1);
+}
+
+#quadrante-digital {
+    width: 20%; 
+    visibility: hidden;
+}
+
+#quadrante-rosto {
+    width: 15%;
+    visibility: hidden;
+}
+
+.bloco-verificacoes-rg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.titulo-rg {
+    font-size: 2rem !important;
+}
+
+.texto-verificacao-rg {
+    display: flex;
+    justify-content: center !important;
+    font-size: 1.6rem !important;
+}
+
+.texto-inferior-rg {
+    font-size: 1.8rem !important;
+}
+
+.camera-container-rg {
+    max-height: 900px !important;
+}
+
+.conteudo-inferior-rg {
+    gap: 15px !important;
+}
+
+@media (max-width: 1540px) {
+    #camera-container {
+        max-height: 300px;
+    }
+
+    .titulo-camera {
+        font-size: 1.6rem;
+    }
+
+    .texto-verificacao {
+        font-size: 1.4rem;
+    }
+
+    .texto-inferior {
+        font-size: 1.5rem;
+    }
+
+    .segunda-coluna {
+        max-width: 248px;
+    }
+
+    .verificacoes-container {
+        width: 75%;
+    }
+
+
+    .bloco-verificacoes-rg {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #camera-container {
+        max-height: 700px;
+    }
+
+    .titulo-camera {
+        font-size: 1.8rem;
+    }
+
+    .texto-verificacao {
+        font-size: 1.4rem;
+    }
+
+    .texto-inferior {
+        font-size: 1.6rem;
+    }
+
+    .verificacoes-container {
+        width: 90%;
+    }
+
+    .verificacoes-container-interno {
+        flex-direction: row;
+    }
+
+    .segunda-coluna {
+        width: auto;
+        max-width: none;
+    }
+
+
+    .bloco-verificacoes-rg {
+        width: 50% !important;
+    }
+
+}
+
+@media (max-width: 720px) {
+    #camera-container {
+        max-height: 500px;
+    }
+
+    .verificacoes-container {
+        width: 90%;
+    }
+
+
+    .bloco-verificacoes-rg {
+        width: 60% !important;
+    }
+
+    .titulo-rg {
+        font-size: 1.2rem !important;
+    }
+
+    .texto-inferior-rg {
+        font-size: 1.2rem !important;
+    }
+
+    .texto-verificacao-rg {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    #camera-container {
+        min-height: 0px;
+        max-height: 350px;
+    }
+    
+    .titulo-camera {
+        font-size: 1.3rem;
+    }
+
+    .texto-verificacao {
+        font-size: .9rem;
+        justify-content: start;
+    }
+
+    .texto-inferior {
+        font-size: 1.2rem;
+    }
+
+    .conteudo-inferior {
+        gap: 30px;
+    }
+
+    .verificacoes-container {
+        width: 85%;
+    }
+    
+    .titulo-rg {
+        font-size: 1.1rem !important;
+    }
+
+    .texto-inferior-rg {
+        font-size: 1rem !important;
+    }
+
+    .bloco-verificacoes-rg {
+        width: 75% !important;
+    }
+}
