@@ -164,3 +164,82 @@ header {
 .custom-dropdown::after {
   display: none !important;
 }
+
+.contract {
+  width: calc(100vw - 300px);
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 20px 0 20px 0;
+}
+
+iframe {
+  width: calc(100vw - 800px);
+  height: calc(100vh - 140px);
+  border: none;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+}
+
+.authentication-box {
+  width: 440px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  gap: 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.authentication-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6b6a6a;
+  margin-right: 10px;
+}
+
+.authentication-email {
+  width: 358px;
+  height: 77px;
+  background-color: #eafdf4;
+  border-radius: 7px;
+  border: 2px dashed #c3cec9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication-email p {
+  color: #33336d;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.proceed-button {
+  width: 65%;
+  height: 34px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.proceed-button button {
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+}
+
+.cancel-signature {
+  background-color: none;
+}
+
+.confirm-signature {
+  background-color: #2eda8a;
+}
