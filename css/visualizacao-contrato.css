@@ -1,0 +1,47 @@
+.contract {
+  width: calc(100vw - 300px);
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 20px 0 10px 0;
+}
+
+.authentication-box {
+  width: 440px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  gap: 10px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.authentication-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6b6a6a;
+  margin-right: 10px;
+}
+
+.authentication-email {
+  width: 358px;
+  height: 77px;
+  background-color: #eafdf4;
+  border-radius: 7px;
+  border: 2px dashed #c3cec9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication-email p {
+  color: #33336d;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+}
