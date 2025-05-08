@@ -200,3 +200,24 @@ header {
     display: none;
   }
 }
+
+.proceed-button {
+  height: 34px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.proceed-button button {
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+}
+
+.cancel-signature {
+  background-color: none;
+}
+
+.confirm-signature {
+  background-color: #2eda8a;
+}

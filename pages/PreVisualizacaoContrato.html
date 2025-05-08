@@ -27,9 +27,11 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/visualizacao-contrato.css" />
+    <link rel="stylesheet" href="../css/assinatura-contrato.css" />
+    <link rel="stylesheet" href="../css/intercom.css" />
   </head>
   <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 main-container">
       <header class="py-3 px-5 d-flex align-items-center shadow bg-white">
         <img
           src="../assets/letssign.png"
@@ -137,7 +139,7 @@
         </div>
       </header>
 
-      <div class="d-flex">
+      <div class="d-flex main-content">
         <aside class="sidebar">
           <div class="menu-item" style="pointer-events: none">
             <div class="menu-icon" style="pointer-events: none"></div>
@@ -247,29 +249,57 @@
           </div>
         </aside>
 
-        <main>
-          <div class="container-fluid p-0 contract">
-            <img src="../assets/print_contrato.png" alt="Imagem do Contrato" />
-            <section class="shadow-sm authentication-box">
-              <div>
-                <img src="../assets/lock logo.svg" alt="Cadeado" />
-                <span class="authentication-title">Authenticate via </span>
-                <img src="../assets/govbr.png" alt="Gov.br Logo" width="76px" />
-              </div>
-              <div class="authentication-email">
-                <p>augusto.da.silva@gmail.com Enviou para assinatura</p>
-              </div>
-            </section>
+        <main class="flex-grow-1 overflow-auto p-4">
+          <p class="step">Etapa 01</p>
+          <div class="page-title mb-3">
+            <h5>Visualização do contrato</h5>
           </div>
-          <div class="proceed-button">
-            <button type="button" class="btn btn-light cancel-signature">
-              Cancelar
-            </button>
-            <a href="./AssinaturaContrato.html">
-              <button type="button" class="btn btn-success confirm-signature">
-                Assinar Documento
-              </button>
-            </a>
+
+          <div class="row g-4">
+            <div class="col-lg-8 d-flex flex-column align-items-center">
+              <div
+                id="document-dropzone"
+                class="document-preview shadow-sm w-100"
+              >
+                <img
+                  src="../assets/print_contrato.png"
+                  alt="Imagem do Contrato"
+                  class="img-fluid contract-image"
+                />
+              </div>
+              <div class="proceed-button mt-4">
+                <button type="button" class="btn btn-light cancel-signature">
+                  Cancelar
+                </button>
+                <a href="./AssinaturaContrato.html">
+                  <button
+                    type="button"
+                    class="btn btn-success confirm-signature"
+                  >
+                    Prosseguir
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column">
+              <div
+                class="signature-palette bg-white p-4 rounded shadow-sm mb-3 w-100"
+              >
+                <div class="text-center mb-3">
+                  <img src="../assets/lock logo.svg" alt="Cadeado" />
+                  <span class="authentication-title">Authenticate via </span>
+                  <img
+                    src="../assets/govbr.png"
+                    alt="Gov.br Logo"
+                    width="76px"
+                  />
+                </div>
+                <div class="authentication-email-visualizacao p-3">
+                  <p>augusto.da.silva@gmail.com Enviou para assinatura</p>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>
