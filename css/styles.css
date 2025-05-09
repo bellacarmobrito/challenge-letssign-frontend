@@ -23,9 +23,12 @@ header img {
   width: 160px;
 }
 
+.container-fluid.vh-100 {
+  min-height: 100vh;
+}
+
 header {
   height: 70px;
-  z-index: -1;
 }
 
 .header-logo {
@@ -134,12 +137,6 @@ header {
   }
 }
 
-@media (max-width: 420px) {
-  /* .shield-icon {
-    display: none;
-  } */
-}
-
 @media (max-width: 620px) {
   .send-document,
   .earn-money {
@@ -192,7 +189,29 @@ header {
     background-color: #353470;
   }
 
-  .sidebar .menu-item:last-child, .sidebar .menu-item:first-child {
+  .sidebar .menu-item:last-child,
+  .sidebar .menu-item:first-child {
     display: none;
   }
+}
+
+.proceed-button {
+  height: 34px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.proceed-button button {
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+}
+
+.cancel-signature {
+  background-color: none;
+}
+
+.confirm-signature {
+  background-color: #2eda8a;
 }

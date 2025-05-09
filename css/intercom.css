@@ -1,0 +1,45 @@
+.intercom-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #300996;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.intercom-button:hover {
+  background-color: #300996;
+  transform: scale(1.05);
+}
+
+.intercom-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 576px) {
+  .intercom-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+  }
+}
+
+.step {
+  font-size: 15px;
+  color: #353470;
+  text-align: center;
+  margin-top: 10px;
+}
