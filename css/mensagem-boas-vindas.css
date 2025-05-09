@@ -1,5 +1,6 @@
 .welcome-container {
-  width: 70%; 
+  width: 100%;
+  max-width: 600px; /* define um limite pra telas grandes */
 }
 .welcome-box {
   padding: 1.5rem;
@@ -40,9 +41,3 @@
   cursor: pointer;
 }
 
-@media (max-width:768px){
-  .welcome-container {
-  width: 100%;
-    
-  }
-}
