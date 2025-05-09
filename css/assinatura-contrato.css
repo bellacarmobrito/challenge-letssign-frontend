@@ -107,3 +107,35 @@
 .invisivel {
   display: none !important;
 }
+
+@media (max-width: 425px) {
+  .row.g-4 > .col-lg-8,
+  .row.g-4 > .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  main.flex-grow-1 {
+    padding: 1rem;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar .menu-item:nth-child(3),
+  .sidebar .menu-item:nth-child(4),
+  .sidebar .menu-item:nth-child(6) {
+    display: none;
+  }
+
+  .intercom-button {
+    display: none;
+  }
+}

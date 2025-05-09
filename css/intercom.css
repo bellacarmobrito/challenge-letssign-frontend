@@ -33,8 +33,10 @@
     font-size: 20px;
     bottom: 15px;
     right: 15px;
+    display: none;
   }
 }
+
 .step {
   font-size: 15px;
   color: #353470;
