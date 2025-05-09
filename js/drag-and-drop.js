@@ -42,8 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemType = draggedElement?.dataset.type;
     const itemIconClass = draggedElement?.dataset.icon;
 
-    const x = event.offsetX;
-    const y = event.offsetY;
+    const dropzoneRect = dropzone.getBoundingClientRect();
+    const x = event.clientX - dropzoneRect.left;
+    const y = event.clientY - dropzoneRect.top;
 
     createDroppedElement(itemType, itemIconClass, x, y, dropzone);
     dropConcluido = true;
