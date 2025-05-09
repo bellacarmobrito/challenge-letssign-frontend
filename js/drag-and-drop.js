@@ -5,27 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     '.sig-option[draggable="true"]'
   );
   const dropzone = document.getElementById("document-dropzone");
-  const dropFeedback = document.getElementById("drop-feedback");
 
   draggableItems.forEach((item) => {
     item.addEventListener("dragstart", (event) => {
+      dropConcluido = false;
       event.dataTransfer.setData("text/plain", event.target.id);
-      event.dataTransfer.setData("text/type", event.target.dataset.type);
-      event.dataTransfer.setData("text/icon", event.target.dataset.icon);
       event.dataTransfer.effectAllowed = "copy";
-
       event.target.classList.add("dragging");
-
-      const type = event.target.dataset.type;
-      if (type === "Reconhecimento Facial" || type === "Biometria") {
-        if (dropFeedback) dropFeedback.style.display = "block";
-      }
     });
 
     item.addEventListener("dragend", (event) => {
       event.target.classList.remove("dragging");
-
-      if (dropFeedback) dropFeedback.style.display = "none";
     });
   });
 
@@ -48,20 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
     dropzone.classList.remove("drag-over");
 
     const draggedItemId = event.dataTransfer.getData("text/plain");
-    const itemType = event.dataTransfer.getData("text/type");
-    const itemIconClass = event.dataTransfer.getData("text/icon");
+    const draggedElement = document.getElementById(draggedItemId);
+    const itemType = draggedElement?.dataset.type;
+    const itemIconClass = draggedElement?.dataset.icon;
 
     const x = event.offsetX;
     const y = event.offsetY;
 
-    console.log(
-      `Dropped: ${itemType} (ID: ${draggedItemId}) at X: ${x}, Y: ${y}`
-    );
-
     createDroppedElement(itemType, itemIconClass, x, y, dropzone);
+    dropConcluido = true;
 
-    if (itemType === "Reconhecimento Facial") {
-      if (dropFeedback) dropFeedback.style.display = "block";
+    if (draggedElement) {
+      draggedElement.remove();
     }
   });
 
@@ -70,20 +58,35 @@ document.addEventListener("DOMContentLoaded", () => {
     droppedElement.classList.add("dropped-item");
     droppedElement.dataset.type = type;
 
-    // Adiciona ícone e texto
+    droppedElement.style.position = "absolute";
+    droppedElement.style.left = `${x}px`;
+    droppedElement.style.top = `${y}px`;
+    droppedElement.draggable = true;
+
+    const contentWrapper = document.createElement("div");
+    contentWrapper.classList.add("d-flex", "align-items-center", "gap-1");
+
     const iconElement = document.createElement("i");
     iconElement.className = `bi ${iconClass}`;
-    droppedElement.appendChild(iconElement);
+    contentWrapper.appendChild(iconElement);
 
     const textElement = document.createElement("span");
     textElement.textContent = type;
-    droppedElement.appendChild(textElement);
+    contentWrapper.appendChild(textElement);
 
-    droppedElement.style.left = `${x}px`;
-    droppedElement.style.top = `${y}px`;
+    droppedElement.appendChild(contentWrapper);
 
-    droppedElement.draggable = true;
+    if (type === "Reconhecimento Facial") {
+      const feedback = document.createElement("div");
+      feedback.className = "alert alert-warning mt-1 p-2";
+      feedback.style.fontSize = "13px";
+      feedback.innerHTML = `
+      <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+      <small>Atenção: a foto será adicionada em anexo.</small>`;
+      droppedElement.appendChild(feedback);
+    }
 
     container.appendChild(droppedElement);
+    return droppedElement;
   }
 });
