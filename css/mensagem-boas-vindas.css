@@ -1,12 +1,11 @@
 .welcome-container {
-    width: 60%; 
+  width: 70%; 
 }
-
 .welcome-box {
   padding: 1.5rem;
   background-color: #C1EBFF;
-  border-radius: 12px;
-  border: 10px solid #00DBFF;
+  border-radius: 50px;
+  border: 30px solid #00DBFF;
   
 }
 
@@ -14,18 +13,18 @@
   font-size: 1.75rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: #333;
+  color: #353470;
 }
 
 .welcome-box p {
-  margin-bottom: 1rem;
+  margin-bottom: 30px;
   line-height: 1.5;
-  color: #333;
+  color: #353470;
 }
 
 .welcome-box ul {
   margin: 0 0 1.5rem 1.5rem;
-  color: #333;
+  color: #353470;
 }
 
 
@@ -39,4 +38,11 @@
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
+}
+
+@media (max-width:768px){
+  .welcome-container {
+  width: 100%;
+    
+  }
 }

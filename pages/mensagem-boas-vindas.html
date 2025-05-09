@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../css/mensagem-boas-vindas.css" />
   </head>
   <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 main-container">
       <header class="py-3 px-5 d-flex justify-content-between shadow bg-white">
         <img
           src="../assets/letssign.png"
@@ -52,7 +52,7 @@
         </div>
       </header>
 
-      <div class="d-flex">
+      <div class="d-flex main-content">
         <aside class="sidebar">
           <div class="menu-item" style="pointer-events: none">
             <div class="menu-icon" style="pointer-events: none"></div>
@@ -101,8 +101,8 @@
         </aside>
 
         <main class="flex-grow-1 p-4 d-flex justify-content-center">
-          <div class="  d-flex justify-content-center align-items-center welcome-container">
-            <div class="welcome-box">
+          <div class="d-flex justify-content-center align-items-center welcome-container container-fluid">
+            <div class="welcome-box ">
               <h2>👋 Bem‑vindo(a)!</h2>
               <p>
                 Nossa aplicação segue altos padrões de segurança para garantir que não haja
@@ -123,9 +123,11 @@
                 com o uso dessa funcionalidade e captura de seus dados para melhorar sua
                 experiência.
               </p>
-              <button class="btn proceed-button">Prosseguir</button> 
+              <a href="./verificacao-rg.html">
+              <button class="btn proceed-button">Prosseguir</button></a>
               </div>
           </div>
+          
         </main>
       </div>
     </div>
