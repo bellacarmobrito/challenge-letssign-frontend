@@ -137,12 +137,6 @@ header {
   }
 }
 
-@media (max-width: 420px) {
-  /* .shield-icon {
-    display: none;
-  } */
-}
-
 @media (max-width: 620px) {
   .send-document,
   .earn-money {
