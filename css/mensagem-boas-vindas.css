@@ -1,0 +1,43 @@
+.welcome-container {
+  width: 100%;
+  max-width: 600px; /* define um limite pra telas grandes */
+}
+.welcome-box {
+  padding: 1.5rem;
+  background-color: #C1EBFF;
+  border-radius: 50px;
+  border: 30px solid #00DBFF;
+  
+}
+
+.welcome-box h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #353470;
+}
+
+.welcome-box p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: #353470;
+}
+
+.welcome-box ul {
+  margin: 0 0 1.5rem 1.5rem;
+  color: #353470;
+}
+
+
+.proceed-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 2.5rem;
+  font-size: 1rem;
+  background: linear-gradient(to bottom, #fff, #e0e0e0);
+  border: 4px solid #514c9b;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
