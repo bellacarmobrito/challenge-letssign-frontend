@@ -26,12 +26,12 @@
     />
 
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/assinatura-contrato.css" />
+    <link rel="stylesheet" href="../css/intercom.css" />
   </head>
   <body>
     <div class="container-fluid p-0 main-container">
-
-      <header class="py-3 px-4 d-flex align-items-center shadow bg-white">
-
+      <header class="py-3 px-5 d-flex align-items-center shadow bg-white">
         <img
           src="../assets/letssign.png"
           alt="LetsSign"
@@ -175,7 +175,11 @@
 
           <div class="menu-item">
             <div class="menu-icon">
-              <img src="../assets/Vector.svg" alt="Ícone" style="padding: 2px" />
+              <img
+                src="../assets/Vector.svg"
+                alt="Ícone"
+                style="padding: 2px"
+              />
             </div>
             <div class="menu-text">
               <a href="#">Modelos</a>
@@ -223,7 +227,11 @@
 
           <div class="menu-item">
             <div class="menu-icon">
-              <img src="../assets/headset.svg" alt="Ícone" style="padding: 2px" />
+              <img
+                src="../assets/headset.svg"
+                alt="Ícone"
+                style="padding: 2px"
+              />
             </div>
             <div class="menu-text">
               <a href="#">Ajuda</a>
@@ -240,16 +248,151 @@
           </div>
         </aside>
 
-        <main>
-          <!-- CONTEÚDO AQUI -->
+        <main class="flex-grow-1 overflow-auto p-4">
+          <p class="step">Etapa 02 e 03</p>
+          <div class="page-title mb-3">
+            <h5>Posicionar assinaturas no(s) documento(s)</h5>
+            <span
+              >Dica: Para replicar ou remover a assinatura/rubrica do documento,
+              clique com o botão direito do mouse
+            </span>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-8 d-flex flex-column align-items-center">
+              <div
+                id="document-dropzone"
+                class="document-preview shadow-sm w-100"
+              >
+                <img
+                  src="../assets/print_contrato.png"
+                  alt="Imagem do Contrato"
+                  class="img-fluid contract-image"
+                />
+              </div>
+              <div class="proceed-button mt-4">
+                <a href="./PreVisualizacaoContrato.html">
+                  <button type="button" class="btn btn-light cancel-signature">
+                    Cancelar
+                  </button>
+                </a>
+                <a href="./mensagem-boas-vindas.html">
+                  <button
+                    type="button"
+                    class="btn btn-success confirm-signature"
+                  >
+                    Prosseguir
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div
+                class="signature-palette bg-white p-3 rounded shadow-sm mb-3"
+              >
+                <p
+                  class="mb-2 text-center fw-semibold"
+                  style="font-size: 14px; color: #33336d"
+                >
+                  pamela.silva@gmail.com - Signatário(a)
+                </p>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div
+                      class="sig-option"
+                      id="drag-assinatura"
+                      draggable="true"
+                      data-type="Assinatura"
+                      data-icon="bi-pencil-fill"
+                    >
+                      <i class="bi bi-pencil-fill"></i>
+                      <span>Assinatura</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="sig-option"
+                      id="drag-rubrica"
+                      draggable="true"
+                      data-type="Rubrica"
+                      data-icon="bi-vector-pen"
+                    >
+                      <span class="signature-initial" style="font-size: 25px"
+                        >A</span
+                      >
+                      <span>Rubrica</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="sig-option"
+                      id="drag-facial"
+                      draggable="true"
+                      data-type="Reconhecimento Facial"
+                      data-icon="bi-person-bounding-box"
+                      data-img-src="../assets/ar_on_you.svg"
+                    >
+                      <img
+                        src="../assets/ar_on_you.svg"
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
+                      <span>Reconhecimento Facial</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="sig-option"
+                      id="drag-biometria"
+                      draggable="true"
+                      data-type="Biometria"
+                      data-icon="bi-fingerprint"
+                    >
+                      <img
+                        src="../assets/fingerprint.svg"
+                        alt=""
+                        width="18"
+                        height="18"
+                      />
+
+                      <span>Biometria</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
+
+    <button
+      id="intercom-button"
+      class="intercom-button"
+      type="button"
+      aria-label="Abrir chat"
+    >
+      <svg
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 28 32"
+        width="24"
+        height="24"
+        fill="white"
+      >
+        <path
+          d="M28,32 C28,32 23.2863266,30.1450667 19.4727818,28.6592 L3.43749107,28.6592 C1.53921989,28.6592 0,27.0272 0,25.0144 L0,3.6448 C0,1.632 1.53921989,0 3.43749107,0 L24.5615088,0 C26.45978,0 27.9989999,1.632 27.9989999,3.6448 L27.9989999,22.0490667 L28,22.0490667 L28,32 Z M23.8614088,20.0181333 C23.5309223,19.6105242 22.9540812,19.5633836 22.5692242,19.9125333 C22.5392199,19.9392 19.5537934,22.5941333 13.9989999,22.5941333 C8.51321617,22.5941333 5.48178311,19.9584 5.4277754,19.9104 C5.04295119,19.5629428 4.46760991,19.6105095 4.13759108,20.0170667 C3.97913051,20.2124916 3.9004494,20.4673395 3.91904357,20.7249415 C3.93763774,20.9825435 4.05196575,21.2215447 4.23660523,21.3888 C4.37862552,21.5168 7.77411059,24.5386667 13.9989999,24.5386667 C20.2248893,24.5386667 23.6203743,21.5168 23.7623946,21.3888 C23.9467342,21.2215726 24.0608642,20.9827905 24.0794539,20.7254507 C24.0980436,20.4681109 24.0195551,20.2135019 23.8614088,20.0181333 Z"
+        ></path>
+      </svg>
+    </button>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/drag-and-drop.js"></script>
   </body>
 </html>

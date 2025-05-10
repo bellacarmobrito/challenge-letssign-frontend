@@ -27,11 +27,11 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
 
-    <link rel="stylesheet" href="../css/reconhecimento-visual.css" />
+    <link rel="stylesheet" href="../css/mensagem-boas-vindas.css" />
   </head>
   <body>
     <div class="container-fluid p-0 main-container">
-      <header class="py-3 px-4 d-flex justify-content-between shadow bg-white">
+      <header class="py-3 px-5 d-flex justify-content-between shadow bg-white">
         <img
           src="../assets/letssign.png"
           alt="LetsSign"
@@ -100,18 +100,34 @@
           </div>
         </aside>
 
-        <main class="flex-grow-1 p-4 d-flex justify-content-center">
-            <div class="content-container shadow rounded-4 p-4 h-100 d-flex justify-content-center text-white flex-column align-items-center reconhecimento-container">
-                <h1 class="titulo-camera fw-bold">Centralize o seu dedo</h1>
-                <div class="bg-white rounded-4 d-flex justify-content-center align-items-center overflow-hidden" id="camera-container">
-                    <video id="video" autoplay playsinline class="w-100 h-100 object-fit-cover"></video>
-                    <canvas id="canvas" class="d-none"></canvas>
-                    <img src="../assets/icone-digital-azul.svg" id="quadrante-digital" alt="quadrante para posicionamento da digital" class="position-absolute" />
-                </div>
-                <div class="w-75 d-flex justify-content-center mb-4 mt-5">
-                    <h2 class="texto-inferior">Por favor, aguarde enquanto identificamos a sua digital.</h1>
-                </div>
-            </div>
+        <main class="col-lg-10 col-12 p-4 d-flex justify-content-center">
+          <div class="d-flex justify-content-center align-items-center welcome-container container-fluid">
+            <div class="welcome-box ">
+              <h2>👋 Bem‑vindo(a)!</h2>
+              <p>
+                Nossa aplicação segue altos padrões de segurança para garantir que não haja
+                falsificação de documentos.
+              </p>
+              <p>
+                Utilizamos tecnologia avançada de reconhecimento de identidade desenvolvida
+                com princípios éticos e rigor técnico para garantir um processo justo e
+                isento de preconceitos algorítmicos.
+              </p>
+              <p>Durante este processo, serão coletadas:</p>
+              <ul>
+                <li>Uma foto de sua identidade com foto e digital</li>
+                <li>Uma foto de seu rosto</li>
+              </ul>
+              <p>
+                Seu conforto e segurança são nossa prioridade. Ao prosseguir, você concorda
+                com o uso dessa funcionalidade e captura de seus dados para melhorar sua
+                experiência.
+              </p>
+              <a href="./verificacao-rg.html">
+              <button class="btn proceed-button">Prosseguir</button></a>
+              </div>
+          </div>
+          
         </main>
       </div>
     </div>
@@ -121,6 +137,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
     ></script>
-    <script src="../js/reconhecimento-visual.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

@@ -26,12 +26,12 @@
     />
 
     <link rel="stylesheet" href="../css/styles.css" />
-
     <link rel="stylesheet" href="../css/reconhecimento-visual.css" />
+    <link rel="stylesheet" href="../css/intercom.css" />
   </head>
   <body>
-    <div class="container-fluid p-0">
-      <header class="py-3 px-5 d-flex justify-content-between shadow bg-white">
+    <div class="container-fluid p-0 main-container">
+      <header class="py-3 px-4 d-flex justify-content-between shadow bg-white">
         <img
           src="../assets/letssign.png"
           alt="LetsSign"
@@ -52,7 +52,7 @@
         </div>
       </header>
 
-      <div class="d-flex">
+      <div class="d-flex main-content">
         <aside class="sidebar">
           <div class="menu-item" style="pointer-events: none">
             <div class="menu-icon" style="pointer-events: none"></div>
@@ -101,30 +101,77 @@
         </aside>
 
         <main class="flex-grow-1 p-4 d-flex justify-content-center">
-          <div class="content-container shadow rounded-4 p-4 h-100 d-flex justify-content-center text-white flex-column align-items-center reconhecimento-container">
-              <h1 class="titulo-camera titulo-rg fw-bold">Tire uma foto do seu documento RG</h1>
-              <div class="bg-white rounded-4 d-flex justify-content-center align-items-center overflow-hidden" id="camera-container">
-                  <video id="video" autoplay playsinline class="w-100 h-100 object-fit-cover"></video>
-                  <canvas id="canvas" class="d-none"></canvas>
+          <div
+            class="content-container shadow rounded-4 p-4 h-100 d-flex justify-content-center text-white flex-column align-items-center reconhecimento-container"
+          >
+            <h1 class="titulo-camera titulo-rg fw-bold">
+              Tire uma foto do seu documento RG
+            </h1>
+            <div
+              class="bg-white rounded-4 d-flex justify-content-center align-items-center overflow-hidden"
+              id="camera-container"
+            >
+              <video
+                id="video"
+                autoplay
+                playsinline
+                class="w-100 h-100 object-fit-cover"
+              ></video>
+              <canvas id="canvas" class="d-none"></canvas>
+            </div>
+            <div class="conteudo-inferior">
+              <div class="bloco-verificacoes-rg">
+                <span class="texto-verificacao texto-verificacao-rg"
+                  ><img
+                    class="w-25 icon-reconhecimento"
+                    src="../assets/icon-aguardando.svg"
+                    alt="aguardando reconhecimento"
+                  />Frente</span
+                >
+                <span class="texto-verificacao texto-verificacao-rg"
+                  ><img
+                    class="w-25 icon-reconhecimento"
+                    src="../assets/icon-aguardando.svg"
+                    alt="aguardando reconhecimento"
+                  />Verso</span
+                >
               </div>
-              <div class="conteudo-inferior">
-                <div class=" bloco-verificacoes-rg">
-                  <span class="texto-verificacao texto-verificacao-rg"><img class="w-25 icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />Frente</span>
-                  <span class="texto-verificacao texto-verificacao-rg"><img class="w-25 icon-reconhecimento" src="../assets/icon-aguardando.svg" alt="aguardando reconhecimento" />Verso</span>
-                </div>
-                <div class="w-75 d-flex">
-                  <p class="texto-inferior texto-inferior-rg">Utilizamos o reconhecimento do seu RG para deixar o ambiente mais seguro!</p>
-                </div>
+              <div class="w-75 d-flex">
+                <p class="texto-inferior texto-inferior-rg">
+                  Utilizamos o reconhecimento do seu RG para deixar o ambiente
+                  mais seguro!
+                </p>
               </div>
+            </div>
           </div>
         </main>
       </div>
     </div>
 
+    <button
+      id="intercom-button"
+      class="intercom-button"
+      type="button"
+      aria-label="Abrir chat"
+    >
+      <svg
+        focusable="false"
+        aria-hidden="true"
+        viewBox="0 0 28 32"
+        width="24"
+        height="24"
+        fill="white"
+      >
+        <path
+          d="M28,32 C28,32 23.2863266,30.1450667 19.4727818,28.6592 L3.43749107,28.6592 C1.53921989,28.6592 0,27.0272 0,25.0144 L0,3.6448 C0,1.632 1.53921989,0 3.43749107,0 L24.5615088,0 C26.45978,0 27.9989999,1.632 27.9989999,3.6448 L27.9989999,22.0490667 L28,22.0490667 L28,32 Z M23.8614088,20.0181333 C23.5309223,19.6105242 22.9540812,19.5633836 22.5692242,19.9125333 C22.5392199,19.9392 19.5537934,22.5941333 13.9989999,22.5941333 C8.51321617,22.5941333 5.48178311,19.9584 5.4277754,19.9104 C5.04295119,19.5629428 4.46760991,19.6105095 4.13759108,20.0170667 C3.97913051,20.2124916 3.9004494,20.4673395 3.91904357,20.7249415 C3.93763774,20.9825435 4.05196575,21.2215447 4.23660523,21.3888 C4.37862552,21.5168 7.77411059,24.5386667 13.9989999,24.5386667 C20.2248893,24.5386667 23.6203743,21.5168 23.7623946,21.3888 C23.9467342,21.2215726 24.0608642,20.9827905 24.0794539,20.7254507 C24.0980436,20.4681109 24.0195551,20.2135019 23.8614088,20.0181333 Z"
+        ></path>
+      </svg>
+    </button>
+
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
     ></script>
     <script src="../js/reconhecimento-visual.js"></script>
   </body>
