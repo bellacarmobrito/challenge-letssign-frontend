@@ -1,4 +1,5 @@
 let dropConcluido = false;
+let opcoesDropadas = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const draggableItems = document.querySelectorAll(
@@ -49,6 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
     createDroppedElement(itemType, itemIconClass, x, y, dropzone);
     dropConcluido = true;
 
+    if (itemType && !opcoesDropadas.includes(itemType)) {
+      opcoesDropadas.push(itemType);
+    }
+
     if (draggedElement) {
       draggedElement.remove();
     }
@@ -89,5 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.appendChild(droppedElement);
     return droppedElement;
+  }
+
+  const btnProsseguir = document.getElementById("btn-prosseguir");
+  if (btnProsseguir) {
+    btnProsseguir.addEventListener("click", () => {
+      if (opcoesDropadas.includes("Reconhecimento Facial")) {
+        localStorage.setItem("opcaoSelecionada", "Reconhecimento Facial");
+        window.location.href = "mensagem-boas-vindas-facial.html";
+      } else if (opcoesDropadas.includes("Biometria")) {
+        localStorage.setItem("opcaoSelecionada", "Biometria");
+        window.location.href = "mensagem-boas-vindas-digital.html";
+      } else {
+        alert(
+          "Por favor arraste Biometria ou Reconhecimento Facial para o documento."
+        );
+      }
+    });
   }
 });
