@@ -90,27 +90,30 @@ function iniciarReconhecimentoRG() {
       alterarIcone(icone, delay);
     });
 
-    const quantidadeDeIcones = icones.length + 1;
-
-    switch (tipoDeAutenticacao) {
-      case 'Reconhecimento Facial':
-        setTimeout(() => {
-          window.location.href = '../pages/disclaimer-facial.html';
-        }, tempoBaseDeDelayEmMs * quantidadeDeIcones);
-        break;
-      case 'Biometria':
-        setTimeout(() => {
-          window.location.href = '../pages/disclaimer-digital.html';
-        }, tempoBaseDeDelayEmMs * quantidadeDeIcones);
-        break;
-      default:
-        console.error('Tipo de autenticação inválido!');
-    }
-
+    redirecionarParaProximoDisclaimer();
   })
   .catch((err) => {
     console.error('Erro ao acessar a câmera:', err);
   });
+}
+
+function redirecionarParaProximoDisclaimer() {
+  const quantidadeDeIcones = document.querySelectorAll('.icon-reconhecimento').length + 1;
+
+  switch (tipoDeAutenticacao) {
+    case 'Reconhecimento Facial':
+      setTimeout(() => {
+        window.location.href = '../pages/disclaimer-facial.html';
+      }, tempoBaseDeDelayEmMs * quantidadeDeIcones);
+      break;
+    case 'Biometria':
+      setTimeout(() => {
+        window.location.href = '../pages/disclaimer-digital.html';
+      }, tempoBaseDeDelayEmMs * quantidadeDeIcones);
+      break;
+    default:
+      console.error('Tipo de autenticação inválido!');
+  }
 }
 
 function inicializarReconhecimento(contexto) {
