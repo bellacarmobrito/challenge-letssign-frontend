@@ -1,6 +1,6 @@
 .welcome-container {
   width: 100%;
-  max-width: 600px; /* define um limite pra telas grandes */
+  max-width: 600px; 
 }
 .welcome-box {
   padding: 1.5rem;
@@ -30,7 +30,9 @@
 
 
 .proceed-button {
-  display: block;
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
   margin: 0 auto;
   padding: 0.5rem 2.5rem;
   font-size: 1rem;
@@ -39,5 +41,6 @@
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
+
 }
 
